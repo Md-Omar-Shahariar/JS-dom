@@ -11,7 +11,7 @@
     <main>
       <section>
         <article>
-          <h3>My Awesome Blog - 1</h3>
+          <h3 id="first_blog">My Awesome Blog - 1</h3>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non sint
             vitae maxime unde voluptate officiis atque, in iusto similique?
@@ -19,7 +19,7 @@
             distinctio commodi et.
           </p>
         </article>
-        <article>
+        <article class="blog2">
           <h3>My Awesome Blog - 2</h3>
           <p>
             Nihil nemo omnis cupiditate quasi qui expedita animi veritatis quam
@@ -49,7 +49,15 @@
       </section>
     </main>
     <script>
-      console.log(document.getElementsByTagName("h3"));
+      const h3 = document.getElementById("first_blog");
+      h3.style.backgroundColor = "red";
+      const article = document.getElementsByClassName("blog2");
+      for (blog of article) {
+        blog.style.backgroundColor = "yellow";
+        blog.style.padding = "40px";
+        blog.style.border = "2px solid black";
+        blog.style.borderRadius = "20px";
+      }
     </script>
   </body>
 </html>
